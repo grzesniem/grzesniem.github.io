@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Grzegorz Śnieżko"> <!-- Praca oddana po termine z powodu nieobecności -->
+        
+        <title>Programowanie zdarzeniowe 1</title>
+        <style>
+            body {
+                margin: 30px;
+                background-color: #eee;
+            }
+            
+            input[type=text] {
+                border: none;
+                border-bottom: 2px solid black;
+                font-size: 18pt;
+                background-color: transparent;
+            }
+            select {
+                background-color: transparent;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form>
+            <input type="text" id="nameEl" placeholder="Twoje imię"><br><br>
+            Zainteresowania<br>
+            <select id="interests">
+                <option value="kolarstwem">Kolarstwo</option>
+                <option value="pojazdami">Pojazdy</option>
+                <option value="geografią">Geografia</option>
+                <option value="architekturą">Architektura</option>
+            </select><br><br>
+            
+            <button type="submit" onclick="thanks()">Wyślij</button>
+            <button type="reset">Resetuj</button>
+        </form>
+        <br>
+        <img id="multimedia" src="1536071398000.jpg" alt="zdjęcie">
+        <div id="description"></div>
+        
+        <script>
+            // Formularz
+            var submit = document.getElementById("submit");
+            var thanks = function(e) {
+                var nameEl = document.getElementById("nameEl").value;
+                var interests = document.getElementById("interests").value;
+                window.alert("Dziękuję " + nameEl + "!\nInteresujesz się " + interests + ".");
+            }
+            
+            // Interakcja ze zdjęciem
+            var photoEl = document.getElementById("multimedia");
+            var onPhotoClick = function() { 
+                document.getElementById("description").textContent = "Zapraszam do auta!";
+                photoEl.src = "1536071398001.jpg";
+                
+                var audioEl = document.createElement("audio");
+                audioEl.src = "van-sliding-door-daniel_simon.mp3";
+                audioEl.autoplay = "true";
+                document.body.appendChild(audioEl);
+            }
+            photoEl.addEventListener("mouseover", onPhotoClick);
+        </script>
+    </body>
+</html>
