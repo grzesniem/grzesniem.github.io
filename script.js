@@ -7,7 +7,7 @@ var d = 0;
 function DodajWpis() {
     
     var l = document.getElementById("dlugosc").value;
-	if (isNaN(l) == 1)
+	if (isNaN(l) == 1 || l == "")
 	{
 		alert("Podaj liczbę!")
 	}
