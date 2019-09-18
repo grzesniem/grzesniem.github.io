@@ -2,21 +2,21 @@
 <html lang="pl">
     <head>
         <meta charset="utf-8">
-        <meta name="author" content="Grzegorz Śnieżko">
-        <title>MI16 - Grzegorz Śnieżko</title>
-        <style>
-            body {
-                background-color: #eee;
-                margin: 30px;
-                font-size: 18pt;
-            }
-        </style>  
+        <title>JavaScript - przypomnienie</title>
+        <style>body{margin: 20px;font-family: sans-serif;background-color: #d4d0c8;}input[type=button]{background-color:#d4d0c8;border: 1px solid gray; margin: 4px;}</style>
+        
+        <!-- Załącz plik .js -->
+        <script src="script.js"></script>
     </head>
     <body>
-       <a href="programowanie_zdarzenieowe/zad1/index.html">Programowanie zdarzeniowe 1</a><br>
-       <a href="programowanie_zdarzenieowe/zad2/index.html">Programowanie zdarzeniowe 2</a><br>
-       <a href="DOM/cats.html">DOM i JavaScript</a><br>
-       <a href="DOM/zainteresowania.html">DOM i JavaScript - zainteresowania</a><br>
+       <p>Obliczanie potrzebnej długości przewodu</p>
+       <input type="button" onclick="DodajWpis()" value="+">
+       <input type="button" onclick="Oblicz()" value="Suma">
+       
+       <br>
+       <div id="container"></div>
+       <input id="dlugosc"><input type="button" onclick="DodajWpis()" value="+">
+       <br>
+       <input type="button" onclick="Odswiez()" value="Odśwież">
     </body>
-    
 </html>

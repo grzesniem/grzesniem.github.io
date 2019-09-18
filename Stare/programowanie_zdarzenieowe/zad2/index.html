@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Programowanie zdarzeniowe 2</title>
+        <style>
+            body {
+                margin: 30px;
+                background-color: #eee;
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <span id="countdown">5</span><br>
+        <button type="submit" onclick="onButtonClick()">Odliczanie</button>
+        <div id="start"></div>
+        
+        <script>
+            var countdown = document.getElementById("countdown");
+            var onButtonClick = function() {
+                var countItDown = function() {
+                    var currentTime = parseFloat(countdown.textContent);
+                    if (currentTime > 0) {
+                        countdown.textContent = currentTime - 1;
+                    }
+                    else {
+                        document.getElementById("start").textContent += "Odliczanie zakończone ... startujemy!!!!";
+                        window.clearInterval(timer); 
+                    } 
+                }
+                var timer = window.setInterval(countItDown, 1000);
+            }
+        </script>
+    </body>
+</html>
