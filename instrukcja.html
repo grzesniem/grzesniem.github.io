@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <script src="instrukcja.js"></script>
+        <meta charset="utf-8">
+		<style>body{margin: 50px;font-family: sans-serif; background-color: #d4d0c8;}input[type=button]{background-color:#d4d0c8; margin: 4px;}</style>
+        <title>JavaScript - ćwiczenia</title>
+    </head>
+    <body>
+		<p><b>1.</b> Napisz instrukcję warunkową, która zwróci alert, gdy 'l' nie jest liczbą, lub jest puste<br><br>
+		<input type="button" onclick="a()" value="Kod"><br>
+	<div id="a" style="display:none;">if (isNaN(l) == 1 || l == "")<br>
+		{<br>
+			alert("Podaj liczbę!")<br>
+		}<br><br>
+		else<br>
+		{<br>
+			document.getElementById("container").innerHTML += lp + ". " + l + "&#60;br&#62;";<br>
+			var intL = Number(l);<br>
+			x = x + intL;<br>
+			lp = lp + 1;<br>
+		}
+		</div>
+		</p><br>
+		
+		<p>
+		<b>2.</b>Napisz równanie, które zwiększa zmienną 'x' o zmienną 'intL' <br>oraz równanie zwiększające 'lp' o 1<br><br>
+		<input type="button" onclick="b()" value="Kod"><br>
+		<div id="b" style="display:none;">
+	x = x + intL;<br>
+	lp = lp + 1;<br>
+	</div>
+	</p><br>
+		
+		<p>
+		<b>3.</b> Dodaj instrukcje warunkowa<br>
+		<br>
+		<b>a)</b> 'y' > 90: 's' + 1, 'y' - 100<br><br>
+		<input type="button" onclick="c()" value="Kod"><br>
+		<div id="c" style="display:none;">
+    if(y > 90) <br>
+	{<br>
+        s++;<br>
+        y = y - 100;<br>
+    }</div><br><br>
+	
+	<b>b)</b> 'y' > 40: 'p' + 1, 'y' - 100<br><br>
+	<input type="button" onclick="d()" value="Kod"><br>
+		<div id="d" style="display:none;">
+    if(y > 40) <br>
+	{<br>
+        p++;<br>
+        y = y - 50;<br>
+    }</div><br><br>
+	
+	<b>c)</b> else: 'd' + 1, 'y' - 10<br><br>
+	<input type="button" onclick="e()" value="Kod"><br>
+		<div id="e" style="display:none;">
+    else <br>
+	{<br>
+        d++;<br>
+        y = y - 10;<br>
+    }</div>
+		</p><br>
+		
+		<p>
+		<b>4.</b> Dodaj alert wypisujący wartości 'x', 's', 'p', 'd' <br><br>
+		<input type="button" onclick="f()" value="Kod"><br>
+		<div id="f" style="display:none;">
+    alert("Łączna długość= " + x + "\n\nKable 100m  x" + s + "\nKable 50m  x" + p + "\nKable 10m  x" + d);</div></p><br>
+	 <iframe src="podglad.html"></iframe> 
+    </body>
+</html>

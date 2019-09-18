@@ -1,40 +1,44 @@
-var pole = 0;
+var lp = 0;
 var x = 0;
-var setki = 0;
-var piatki = 0;
-var dziesiatki = 0;
+var s = 0;
+var p = 0;
+var d = 0;
 
 function DodajWpis() {
-    pole = pole + 1;
+    
     var l = document.getElementById("dlugosc").value;
-    document.getElementById("container").innerHTML += pole + ". " + l + "<br>";
+	if (isNaN(l) == 1)
+	{
+		alert("Podaj liczbę!")
+	}
+	else
+	{
+	lp = lp + 1;
+    document.getElementById("container").innerHTML += lp + ". " + l + "<br>";
     var intL = Number(l);
     x = x + intL;
+	}
 }
 
 function Oblicz() {
-    var wynik = x;
-    setki = 0; 
-    piatki = 0; 
-    dziesiatki = 0;
-    while (wynik > 0) {
-        if(wynik > 90) {
-            setki++;
-            wynik = wynik - 100;
+    var y = x;
+    s = 0; 
+    p = 0; 
+    d = 0;
+    while (y > 0) {
+        if(y > 90) {
+            s++;
+            y = y - 100;
         }
-        else if (wynik > 40)
+        else if (y > 40)
         {
-            piatki++;
-            wynik = wynik - 50;
+            p++;
+            y = y - 50;
         }
         else {
-            dziesiatki++;
-            wynik = wynik - 10;
+            d++;
+            y = y - 10;
         }
     }
-    alert("Łączna długość= " + x + "\n\nKable 100m  x" + setki + "\nKable 50m  x" + piatki + "\nKable 10m  x" + dziesiatki);
-}
-
-function Odswiez() {
-    location.reload();
+    alert("Łączna długość= " + x + "\n\nKable 100m  x" + s + "\nKable 50m  x" + p + "\nKable 10m  x" + d);
 }
