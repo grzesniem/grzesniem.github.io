@@ -1,2 +1,2 @@
-# grzeg2010.github.io
+# grzesniem.github.io
 Projekty na MI16
