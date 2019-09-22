@@ -13,10 +13,10 @@ function DodajWpis() {
 	}
 	else
 	{
-	lp = lp + 1;
+	lp += 1;
     document.getElementById("container").innerHTML += lp + ". " + l + "<br>";
     var intL = Number(l);
-    x = x + intL;
+    x += intL;
 	}
 }
 
@@ -28,16 +28,16 @@ function Oblicz() {
     while (y > 0) {
         if(y > 90) {
             s++;
-            y = y - 100;
+            y -= 100;
         }
         else if (y > 40)
         {
             p++;
-            y = y - 50;
+            y -= 50;
         }
         else {
             d++;
-            y = y - 10;
+            y -= 10;
         }
     }
     alert("Łączna długość= " + x + "\n\nKable 100m  x" + s + "\nKable 50m  x" + p + "\nKable 10m  x" + d);
