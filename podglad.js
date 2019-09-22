@@ -1,32 +1,41 @@
 var lp = 0;
 var x = 0;
+var s = 0;
+var p = 0;
+var d = 0;
 
 function DodajWpis() {
-
+    
     var l = document.getElementById("dlugosc").value;
-    if (isNaN(l) == 1 || l == "") {
-        alert("Podaj liczbę!")
-    } else {
-        lp = lp + 1;
-        document.getElementById("container").innerHTML += lp + ". " + l + "<br>";
-        var intL = Number(l);
-        x = x + intL;
-    }
+	if (isNaN(l) == 1 || l == "")
+	{
+		alert("Podaj liczbę!")
+	}
+	else
+	{
+	lp = lp + 1;
+    document.getElementById("container").innerHTML += lp + ". " + l + "<br>";
+    var intL = Number(l);
+    x = x + intL;
+	}
 }
 
 function Oblicz() {
     var y = x;
-    var s = 0;
-    var p = 0;
-    var d = 0;
+    s = 0; 
+    p = 0; 
+    d = 0;
     while (y > 0) {
-        if (y > 90) {
+        if(y > 90) {
             s++;
             y = y - 100;
-        } else if (y > 40) {
+        }
+        else if (y > 40)
+        {
             p++;
             y = y - 50;
-        } else {
+        }
+        else {
             d++;
             y = y - 10;
         }
