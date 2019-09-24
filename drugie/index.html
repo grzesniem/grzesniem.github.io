@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Oblicz srednia!</title>
+        <style>
+                body{
+                        width: 50%;
+                }
+                table, tr{
+                        width:100%;
+                }
+                td{
+                        width: 50%; 
+                        text-align: center;
+                        border: 1px solid black;
+                }
+                form{
+                        widows: 100%;
+                }
+                form > input{
+                        width:32%;
+                }
+        </style>
+        <script>
+
+                function dodajWierszTabeli(przedmiot, ocena)
+                {
+                        let tr = document.createElement("tr");
+
+                        let przedmiotElement = document.createElement("td");
+                        przedmiotElement.innerHTML = przedmiot;
+                        let ocenaElement = document.createElement("td");
+                        ocenaElement.innerHTML = ocena;
+                        ocenaElement.className = "ocena";
+                        
+                        tr.appendChild(przedmiotElement);
+                        tr.appendChild(ocenaElement);
+                        document.querySelector("table").appendChild(tr);
+                }
+
+                function sprawdzOcene(ocena)
+                {
+                        if(isNaN(ocena))
+                        {
+                                alert("Wprowadź liczbę!");
+                                return false;
+                        } 
+                        else if(ocena % 1 != 0)
+                        {
+
+                                alert("Wprowadź liczbę całkowitą!");
+                                return false;
+                        }
+                        else if(!(ocena <= 6 && ocena >=1))
+                        {
+                                alert("Wprowadź liczbę całkowitą z przedziału od 1 do 6!");
+                                return false;
+                        }
+                        return true;
+                } 
+                function dodajOcene(form)
+                {
+                        let ocena = parseFloat(form.ocena.value);
+                        let przedmiot = form.przedmiot.value;
+
+                        if(sprawdzOcene(ocena))
+                        {
+                                dodajWierszTabeli(przedmiot, ocena);
+                        }
+
+                        form.reset();
+                }
+
+                function zakoncz()
+                {
+                        let elements = document.getElementsByClassName("ocena");
+                        let srednia = 0;
+                        for(let i=0;i<elements.length;i++)
+                        {
+                                srednia+=parseInt(elements[i].innerHTML);
+                        }
+                        srednia /= elements.length;
+                        document.write("Twoja średnia: " + srednia.toFixed(2));
+                }
+
+                window.onload = function()
+                {
+                        document.querySelector("h2").innerHTML += prompt("Podaj swoje imie: ", "Franek") + "!";
+                } 
+        </script>
+</head>
+<body>
+        <h1><a href="tutorial.html">Zbuduj mnie sam!</a></h1>
+        <h2>Witaj </h2>
+        <table>
+
+        </table>
+        <form onsubmit='dodajOcene(this);return false;' >
+                <input placeholder="Przedmiot" name="przedmiot" type="text">
+                <input placeholder="Ocena" name="ocena" type="text">
+                <input type="submit" value="Dodaj ocene">
+        </form> 
+        <input type="button" value="Zakończ dodawanie!" onclick="zakoncz()">
+</body>
+</html>
