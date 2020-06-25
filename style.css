@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+}
+#anchor_tyl {
+    position: fixed;
+    left: 31.5vw;
+    top: 10vw;
+    line-height: 25vw;
+    font-size: 30pt;
+    color: #127b66;
+}#anchor_tyl:hover {
+    cursor: pointer;
+}
+
+#anchor_przod {
+    position: fixed;
+    top: 10vw;
+    right: 31.5vw;
+    line-height: 25vw;
+    font-size: 30pt;
+    color: #127b66;
+}#anchor_przod:hover {
+    cursor: pointer;
+}
+
+#rot {
+    height: 25vw;
+    width: 25vw;
+    top: 10vw;
+    left: 50%;
+    background-color: #ecf0f1;
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 13px rgba(0,0,0,0.18);
+}
+
+#center {
+    position: fixed;
+    top: 15vw;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+    width: 15vw;
+    line-height: 15vw;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40pt;
+    background-color: #e1e6ea;
+    color: #127b66;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+
+}
+
+.bubble {
+    position: absolute;
+    text-align: center;
+    width: 5vw;
+    line-height: 5vw;
+    border-radius: 50%;
+    background-color: #1abc9c;
+    color: #eee;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}.bubble:hover {
+    background-color: #15987e;
+    cursor: pointer;
+}
+
+#rotA {
+    top: 0;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+#rotB {
+    transform: rotate(45deg) translate(0, -71%);
+    top: 14.6%;
+    right: 14.6%;
+}
+
+#rotC {
+    transform: rotate(90deg) translate(-50%, -50%);
+    top: 50%;
+    right: 0;
+}
+
+#rotD {
+    transform: rotate(135deg) translate(0, -71%);
+    bottom: 14.6%;
+    right: 14.6%;
+}
+
+#rotE {
+    transform: rotate(180deg) translate(-50%, -50%);
+    bottom: 0;
+    right: 50%;
+}
+
+#rotF {
+    transform: rotate(225deg) translate(0, -71%);
+    bottom: 14.6%;
+    left: 14.6%;
+}
+
+#rotG {
+    transform: rotate(270deg) translate(50%, -50%);
+    top: 50%;
+    left: 0;
+}
+
+#rotH {
+    transform: rotate(315deg) translate(0, -71%);
+    top: 14.6%;
+    left: 14.6%;
+}
