@@ -63,7 +63,7 @@ body {
     position: absolute;
     text-align: center;
     width: 5vw;
-    line-height: 5vw;
+    height: 5vw;
     border-radius: 50%;
     background-color: #1abc9c;
     color: #eee;
@@ -76,7 +76,8 @@ body {
 }
 
 .bubble img {
-    width: 5vw;
+    width: 4vw;
+    filter: invert();
 }
 
 #rotA {
