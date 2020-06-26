@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
 }
+
 #anchor_tyl {
     position: fixed;
     left: 31.5vw;
@@ -8,7 +9,9 @@ body {
     line-height: 25vw;
     font-size: 30pt;
     color: #127b66;
-}#anchor_tyl:hover {
+}
+
+#anchor_tyl:hover {
     cursor: pointer;
 }
 
@@ -19,7 +22,9 @@ body {
     line-height: 25vw;
     font-size: 30pt;
     color: #127b66;
-}#anchor_przod:hover {
+}
+
+#anchor_przod:hover {
     cursor: pointer;
 }
 
@@ -32,7 +37,7 @@ body {
     position: fixed;
     border-radius: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 13px rgba(0,0,0,0.18);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.18);
 }
 
 #center {
@@ -42,14 +47,16 @@ body {
     z-index: 100;
     transform: translateX(-50%);
     width: 15vw;
+    height: 15vw;
     line-height: 15vw;
     border-radius: 50%;
     text-align: center;
     font-size: 40pt;
     background-color: #e1e6ea;
+    -webkit-background-size: 15vw;
+    background-size: ;
     color: #127b66;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
-
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .bubble {
@@ -60,10 +67,16 @@ body {
     border-radius: 50%;
     background-color: #1abc9c;
     color: #eee;
-    box-shadow: 0 0 6px rgba(0,0,0,0.15);
-}.bubble:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.bubble:hover {
     background-color: #15987e;
     cursor: pointer;
+}
+
+.bubble img {
+    width: 5vw;
 }
 
 #rotA {

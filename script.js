@@ -1,6 +1,5 @@
 var x = 0;
-console.log(x);
-
+var center_circle = document.getElementById("center");
 //Nawigacja do przodu ➡
 //Przejście między ostatnim i pierwszym punktem
 function zerowanie_przod() {
@@ -88,26 +87,57 @@ function tyl() {
     rotation();
 }
 
+function center_image() {
+    switch (x) {
+        case 0:
+            center_circle.style.backgroundImage = "url('images/samolot.jpg')";
+            break;
+        case 1:
+            center_circle.style.backgroundImage = "url('images/samochod.jpg')";
+            break;
+        case 2:
+            center_circle.style.backgroundImage = "url('images/motor.jpg')";
+            break;
+        case 3:
+            center_circle.style.backgroundImage = "url('images/pociag.jpg')";
+            break;
+        case 4:
+            center_circle.style.backgroundImage = "url('images/helikopter.jpg')";
+            break;
+        case 5:
+            center_circle.style.backgroundImage = "url('images/statek.jpg')";
+            break;
+        case 6:
+            center_circle.style.backgroundImage = "url('images/samolot.jpg')";
+            break;
+        case 7:
+            center_circle.style.backgroundImage = "url('images/samolot.jpg')";
+            break;
+    }
+}
+
 //Funckja odpowiedzialna za obrót koła
 function rotation() {
 
     document.getElementById("rot").style.transform = "translateX(-50%) rotate(" + x * -45 + "deg) ";
-    if (x == 8) {
+    /*if (x == 8) {
         document.getElementById("center").innerHTML = 1;
     } else if (x == -1) {
         document.getElementById("center").innerHTML = 8;
     } else {
         document.getElementById("center").innerHTML = x + 1;
-    }
+    }*/
     window.clearTimeout(this.timeoutID);
     this.timeoutID = window.setTimeout(przod, 8000);
+    center_image();
 }
 
 //Akcje po załadowaniu strony
 function zaladowana() {
+    center_image();
     document.getElementById("rot").style.transition = "1s";
-    document.getElementById("head").innerHTML += "<style>.bubble{transition:0.1s}</style>";
-    window.setTimeout(przod, 5000);
+    document.getElementById("head").innerHTML += "<style>.bubble{transition:0.1s}#center{transition: 0.5s}</style>";
+    window.setTimeout(przod, 8000);
 
     //Nawigacja przez naciśnięcie na kółka
     document.getElementById("rotA").addEventListener("click", function () {
